@@ -1,4 +1,4 @@
-# sysorex_website
+# Sys0rex Website
 
 Sysorex Innovator Edge internal website
 
