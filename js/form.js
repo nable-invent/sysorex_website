@@ -34,9 +34,9 @@ function onSubmit(e) {
         })
         .then(data => {
             if (data.response == true) {
-                document.getElementById("messages").innerHTML = "Message Sent Successfully";
+                document.getElementById("messages").innerHTML = "<div class='alert alert-success'> Message Sent Successfully </div>";
             } else {
-                document.getElementById("messages").innerHTML = 'Something went wrong';
+                document.getElementById("messages").innerHTML = "<div class='alert alert-danger'> Something went wrong</div>";
             }
         })
         .catch(error => console.log(error));
