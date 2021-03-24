@@ -181,68 +181,22 @@
 							<a href="/index.html">Home</a>
 						</li>
 
-						<li class="menu-item-has-children">
-							<a href="/index.html">About us</a>
-						</li>
-
 						<!-- Company menu item -->
-						<!-- <li class="">
-							<a href="#">Company</a>
+						<li class="">
+							<a href="#">About us</a>
 							<ul class="sub-menu">
 								<li>
-									<a href="02_company.html">
-										About Us
-									</a>
-								</li>
-								<li class="menu-item-has-children">
-									<a href="#">
+									<a href="/index.html#about-services">
 										Services
 									</a>
-									<ul class="sub-menu">
-										<li>
-											<a href="/index.html">Web development</a>
-										</li>
-										<li>
-											<a href="/index.html">Android development</a>
-										</li>
-
-										<li>
-											<a href="/index.html">IOS development</a>
-										</li>
-
-										<li>
-											<a href="/index.html">Machine learning</a>
-										</li>
-									</ul>
 								</li>
 								<li>
-									<a href="03_products.html">
-										Products
-									</a>
-								</li>
-								<li>
-									<a href="09_events_details_conference_workshops.html">
-										Conference
-									</a>
-								</li>
-								<li class="">
-									<a href="10_events_details_course.html">
-										Course
-									</a>
-								</li>
-								<li>
-									<a href="04_works.html">
-										Cases
-									</a>
-								</li>
-
-								<li>
-									<a href="32_testimonials.html">
-										Testimonials
+									<a href="/index.html#about-timeline">
+										Timeline
 									</a>
 								</li>
 							</ul>
-						</li> -->
+						</li>
 
 						<!-- Product menu item -->
 						<!-- <li class="menu-item-has-mega-menu menu-item-has-children">
@@ -731,7 +685,7 @@
 
 		<!-- Info Boxes -->
 
-		<section class="medium-padding100">
+		<section class="medium-padding100" id="about-services">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -815,6 +769,8 @@
 
 						</div>
 					</div>
+				</div>
+				<div class="row">
 					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 						<div class="crumina-module crumina-info-box info-box--standard-hover">
 
@@ -895,6 +851,8 @@
 
 						</div>
 					</div>
+				</div>
+				<div class="row">
 					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 						<div class="crumina-module crumina-info-box info-box--standard-hover">
 
@@ -926,7 +884,7 @@
 
 		<!-- ... end Info Boxes -->
 		<!-- Timeline Slider-->
-		<section class="crumina-module crumina-module-slider bg-blue-lighteen medium-padding100">
+		<section class="crumina-module crumina-module-slider bg-blue-lighteen medium-padding100" id="about-timeline">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-sm-12 col-sm-offset-0">
@@ -1113,32 +1071,41 @@
 		<section class="bg-8 background-contain pt100">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<div class="crumina-module crumina-heading">
-							<h6 class="heading-sup-title">Watch the video</h6>
-							<h2 class="heading-title">The <span class="c-primary">SIE</span> maneuver</h2>
-							<p class="heading-text">In our journey of over 3 years, we have initiated some of the major
-								changes that have led to SIE emergence as the leader destination for software services
-								talent and business process technology.
-							</p>
-						</div>
-						<a href="02_company.html"
-							class="btn btn-small btn--icon-right btn-border btn--with-shadow c-primary">
-							<svg class="utouch-icon utouch-icon-arrow-right1">
-								<use xlink:href="#utouch-icon-arrow-right1"></use>
-							</svg>
-							<div class="text">
-								<span class="title">Watch Now!!!</span>
-							</div>
-						</a>
-					</div>
-
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<div class="crumina-module crumina-our-video">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="crumina-module crumina-our-video video-container">
 							<div class="video-thumb">
-								<video controls>
+								<video controls id="sysorexVideo">
 									<source src="video/video1.mp4" type=video/mp4>
 								</video>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row padding-y-4">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="row dis-flex align-items-center">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+								<div class="crumina-module crumina-heading">
+									<!-- <h6 class="heading-sup-title">Watch the video</h6> -->
+									<h2 class="heading-title">The <span class="c-primary">SIE</span> maneuver</h2>
+									<p class="heading-text">In our journey of over 3 years, we have initiated some of
+										the major
+										changes that have led to SIE emergence as the leader destination for software
+										services
+										talent and business process technology.
+									</p>
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-align-center">
+								<a onclick="handleWatchNow()"
+									class="btn btn-small btn--icon-right btn-border btn--with-shadow c-primary">
+									<svg class="utouch-icon utouch-icon-arrow-right1">
+										<use xlink:href="#utouch-icon-arrow-right1"></use>
+									</svg>
+									<div class="text">
+										<span class="title">Watch Now!!!</span>
+									</div>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -1148,59 +1115,56 @@
 
 		<!-- ... end Video -->
 		<!--Clients Blocks-->
-		<section class="bg-secondary-color background-contain bg-10">
-			<h2 class="heading-title"><span class="c-primary">Technologies we expertise in</span></h2>
+		<section class="bg-secondary-color background-contain bg-10 padding-y-4">
+			<h2 class="heading-title text-align-center"><span class="c-primary">Technologies we expertise in</span></h2>
 			<div class="container">
 				<div class="row">
 					<div class="box">
 						<!--Backend-->
-						<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
-							<a class="clients-item" href="#">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 padding-1">
+							<a class="clients-item justify-center" href="#">
 								<img src="img/vbnet.jpeg" class="" alt="logo">
-								<!-- <span class="clients-images">
-									
-									</span> -->
 							</a>
 						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
-							<a class="clients-item" href="#">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 padding-1">
+							<a class="clients-item justify-center" href="#">
 								<img src="svg-icons/php.svg" class="" alt="logo">
 							</a>
 						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
-							<a class="clients-item" href="#">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 padding-1">
+							<a class="clients-item justify-center" href="#">
 								<img src="svg/nodejs.svg" class="" alt="logo">
 							</a>
 						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
-							<a class="clients-item" href="#">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 padding-1">
+							<a class="clients-item justify-center" href="#">
 								<img src="svg/java.svg" class="" alt="logo">
 							</a>
 						</div>
 						<!--Frontend-->
-						<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
-							<a class="clients-item" href="#">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 padding-1">
+							<a class="clients-item justify-center" href="#">
 								<img src="svg/react.svg" class="" alt="logo">
 							</a>
 						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
-							<a class="clients-item" href="#">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 padding-1">
+							<a class="clients-item justify-center" href="#">
 								<img src="svg/angular.svg" class="" alt="logo">
 							</a>
 						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
-							<a class="clients-item" href="#">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 padding-1">
+							<a class="clients-item justify-center" href="#">
 								<img src="svg/flutter.svg" class="" alt="logo">
 							</a>
 						</div>
 						<!--Frameworks-->
-						<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
-							<a class="clients-item" href="#">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 padding-1">
+							<a class="clients-item justify-center" href="#">
 								<img src="svg/laravel.svg" class="" alt="logo">
 							</a>
 						</div>
-						<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12">
-							<a class="clients-item" href="#">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 padding-1">
+							<a class="clients-item justify-center" href="#">
 								<img src="svg/django.svg" class="" alt="logo">
 							</a>
 						</div>
@@ -1650,9 +1614,9 @@
 								</svg>
 								<div class="text">April 7 - 10, India</div>
 							</div>
-							<a href="#" class="btn btn--large btn--orange-light btn--with-shadow f-right">
+							<!-- <a href="#" class="btn btn--large btn--orange-light btn--with-shadow f-right">
 								Take This Course
-							</a>
+							</a> -->
 						</div>
 
 						<div class="breadcrumbs-wrap inline-items">
@@ -1738,7 +1702,7 @@
 							Companies using sys0rex gain more than a software solution. They are able to leverage
 							decades of distribution and manufacturing expertise. More importantly, you need a team of
 							industry experts that can be your best practice advocates. </p>
-						<a href="02_company.html" class="learn-more">Learn more about Sysorex</a>
+						<!-- <a href="02_company.html" class="learn-more">Learn more about Sysorex</a> -->
 					</div>
 
 				</div>
@@ -1746,40 +1710,22 @@
 				<div class="col-lg-2 col-lg-offset-1 col-md-3 col-sm-12 col-sm-offset-0 col-xs-12">
 					<div class="widget w-list">
 
-						<h5 class="widget-title">Userful Links</h5>
+						<h5 class="widget-title">Useful Links</h5>
 						<ul class="list list--primary">
 							<li>
-								<a href="index.html">Home</a>
+								<a href="/index.html">Home</a>
 								<svg class="utouch-icon utouch-icon-arrow-right">
 									<use xlink:href="#utouch-icon-arrow-right"></use>
 								</svg>
 							</li>
 							<li>
-								<a href="02_company.html">Company</a>
-								<svg class="utouch-icon utouch-icon-arrow-right">
-									<use xlink:href="#utouch-icon-arrow-right"></use>
-								</svg>
-							</li>
-							<li>
-								<a href="03_products.html">Products</a>
+								<a href="#about-services">About us</a>
 								<svg class="utouch-icon utouch-icon-arrow-right">
 									<use xlink:href="#utouch-icon-arrow-right"></use>
 								</svg>
 							</li>
 							<li>
 								<a href="08_events.html">Events</a>
-								<svg class="utouch-icon utouch-icon-arrow-right">
-									<use xlink:href="#utouch-icon-arrow-right"></use>
-								</svg>
-							</li>
-							<li>
-								<a href="15_pricing_tables.html">Pricing</a>
-								<svg class="utouch-icon utouch-icon-arrow-right">
-									<use xlink:href="#utouch-icon-arrow-right"></use>
-								</svg>
-							</li>
-							<li>
-								<a href="16_news.html">News</a>
 								<svg class="utouch-icon utouch-icon-arrow-right">
 									<use xlink:href="#utouch-icon-arrow-right"></use>
 								</svg>
@@ -1808,7 +1754,7 @@
 							<svg class="utouch-icon utouch-icon-message-closed-envelope-1">
 								<use xlink:href="#utouch-icon-message-closed-envelope-1"></use>
 							</svg>
-							<span class="info">support@utouch.com</span>
+							<span class="info">info@sysorexedge.com</span>
 						</div>
 
 						<a href="#" class="btn btn--green full-width btn--with-shadow js-message-popup cd-nav-trigger">
@@ -1869,12 +1815,9 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<span>
-							Copyright © 2017 <a href="index.html" class="sub-footer__link">Utouch</a>
-						</span>
-
-						<span>Designed by <a href="https://themeforest.net/user/themefire/portfolio">themefire</a>
-							Developed by <a href="https://themeforest.net/user/crumina/portfolio">Crumina</a>
-							Only on <a href="https://themeforest.net/user/crumina/portfolio">Envato Market</a>
+							Copyright ©
+							<script>document.write(new Date().getFullYear());</script>
+							<a href="index.html" class="sub-footer__link">Sysorex Innovator Edge</a>
 						</span>
 					</div>
 				</div>
