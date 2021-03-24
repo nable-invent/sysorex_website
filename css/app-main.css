@@ -13,3 +13,7 @@
 .w-search input {
   width: 100%;
 }
+
+.content-wrapper .slider-wrapper {
+  margin-top: 2rem;
+}
