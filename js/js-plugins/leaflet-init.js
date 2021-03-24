@@ -9,7 +9,7 @@ CRUMINA.maps = {
 			config: {
 				id: 'map',
 				map: {
-					center: new L.LatLng(38.897663, -77.036575),
+					center: new L.LatLng(22.0702594, 82.1430075),
 					zoom: 12,
 					maxZoom: 18,
 					layers: new L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
@@ -25,7 +25,7 @@ CRUMINA.maps = {
 			},
 			markers: [
 				{
-					coords: [38.897663, -77.036575],
+					coords: [22.0702594, 82.1430075],
 					icon: 'marker-google.png'
 				}
 			]
@@ -61,7 +61,7 @@ CRUMINA.maps = {
 				data.config.icon['iconUrl'] = './img/' + item.icon;
 				var icon = L.icon(data.config.icon);
 
-				var marker = L.marker(item.coords, {icon: icon});
+				var marker = L.marker(item.coords, { icon: icon });
 				cluster.addLayer(marker);
 			});
 

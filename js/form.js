@@ -91,9 +91,9 @@ function registerEvent(e) {
         })
         .then(data => {
             if (data.response.response == true) {
-                document.getElementById("messages").innerHTML = "<div class='alert alert-success'> Message Sent Successfully </div>";
+                alert("Event Register Successfully");
             } else {
-                document.getElementById("messages").innerHTML = "<div class='alert alert-danger'>" + data.response.msg + "<div>";
+                alert("<div class='alert alert-danger'>" + data.response.msg + "<div>");
             }
         })
         .catch(error => console.log(error));
