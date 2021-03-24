@@ -7454,3 +7454,11 @@ img.mfp-img {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     opacity: 1; } }
+
+/*/ Center align image/*/
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
