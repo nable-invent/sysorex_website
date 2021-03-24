@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+<body>
+    <form class="form-validate contact-form crumina-submit" method="post" id="contactForm" data-nonce="crumina-submit-form-nonce" data-type="standard" >
+        <div class="with-icon ">
+            <input name="name" id="name" class="width-100" placeholder="Your Name" type="text" required>
+            <svg class="utouch-icon utouch-icon-user"><use xlink:href="#utouch-icon-user"></use></svg>
+        </div>
+
+        <div class="with-icon ">
+            <input name="email" id="email" class="width-100" placeholder="Email Adress" type="text" required>
+            <svg class="utouch-icon utouch-icon-message-closed-envelope-1"><use xlink:href="#utouch-icon-message-closed-envelope-1"></use></svg>
+        </div>
+
+        <div class="with-icon">
+            <input class="with-icon width-100" name="phone" id="phone" placeholder="Phone Number" type="tel" required>
+            <svg class="utouch-icon utouch-icon-telephone-keypad-with-ten-keys"><use xlink:href="#utouch-icon-telephone-keypad-with-ten-keys"></use></svg>
+        </div>
+
+        <div class="with-icon">
+            <input class="with-icon width-100" name="subject" id="subject" placeholder="Subject" type="text" required>
+            <svg class="utouch-icon utouch-icon-icon-1"><use xlink:href="#utouch-icon-icon-1"></use></svg>
+        </div>
+
+        <div class="with-icon">
+            <textarea name="message" id="message" required placeholder="Your Message" rows="5"></textarea>
+            <svg class="utouch-icon utouch-icon-edit"><use xlink:href="#utouch-icon-edit"></use></svg>
+        </div>
+
+        <button type="submit" class="btn btn--green btn--with-shadow full-width">
+            Send a Message
+        </button>
+    </form>
+    <script src="js/form.js"></script>
+</body>
+</html>
