@@ -9,7 +9,7 @@ CRUMINA.maps = {
 			config: {
 				id: 'map',
 				map: {
-					center: new L.LatLng(22.0700482, 82.1429449),
+					center: new L.LatLng(38.897663, -77.036575),
 					zoom: 12,
 					maxZoom: 18,
 					layers: new L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
@@ -25,7 +25,7 @@ CRUMINA.maps = {
 			},
 			markers: [
 				{
-					coords: [22.0700482, 82.1429449],
+					coords: [38.897663, -77.036575],
 					icon: 'marker-google.png'
 				}
 			]
