@@ -41,7 +41,7 @@
 
 
 	<!-- Header -->
-	<header class="header header-has-topbar" id="site-header">
+	<header class="header header--menu-rounded header--blue-lighteen" id="site-header">
 
 
 		<div class="top-bar top-bar-dark">
@@ -74,7 +74,7 @@
 						<svg class="utouch-icon utouch-icon-letter">
 							<use xlink:href="#utouch-icon-letter"></use>
 						</svg>
-						<a href="#">info@sysorexworld.com</a>
+						<a href="#">info@sysorexedge.com</a>
 					</div>
 
 				</div>
@@ -181,68 +181,22 @@
 							<a href="/index.html">Home</a>
 						</li>
 
-						<li class="menu-item-has-children">
-							<a href="/index.html">About us</a>
-						</li>
-
 						<!-- Company menu item -->
-						<!-- <li class="">
-							<a href="#">Company</a>
+						<li class="">
+							<a href="#">About us</a>
 							<ul class="sub-menu">
 								<li>
-									<a href="02_company.html">
-										About Us
-									</a>
-								</li>
-								<li class="menu-item-has-children">
-									<a href="#">
+									<a href="/index.html#about-services">
 										Services
 									</a>
-									<ul class="sub-menu">
-										<li>
-											<a href="/index.html">Web development</a>
-										</li>
-										<li>
-											<a href="/index.html">Android development</a>
-										</li>
-
-										<li>
-											<a href="/index.html">IOS development</a>
-										</li>
-
-										<li>
-											<a href="/index.html">Machine learning</a>
-										</li>
-									</ul>
 								</li>
 								<li>
-									<a href="03_products.html">
-										Products
-									</a>
-								</li>
-								<li>
-									<a href="09_events_details_conference_workshops.html">
-										Conference
-									</a>
-								</li>
-								<li class="">
-									<a href="10_events_details_course.html">
-										Course
-									</a>
-								</li>
-								<li>
-									<a href="04_works.html">
-										Cases
-									</a>
-								</li>
-
-								<li>
-									<a href="32_testimonials.html">
-										Testimonials
+									<a href="/index.html#about-timeline">
+										Timeline
 									</a>
 								</li>
 							</ul>
-						</li> -->
+						</li>
 
 						<!-- Product menu item -->
 						<!-- <li class="menu-item-has-mega-menu menu-item-has-children">
@@ -480,22 +434,18 @@
 									</a>
 									<ul class="sub-menu">
 										<li>
-											<a href="/index.html">Campus Engagement Program</a>
+											<a href="/event_details.html?id=1">Campus Engagement Program</a>
 										</li>
 										<li>
-											<a href="/index.html">SPARK</a>
+											<a href="/event_details.html?id=2">SPARK</a>
 										</li>
 
 										<li>
-											<a href="/index.html">Spartan</a>
+											<a href="/event_details.html?id=3">Modern Age Spartan</a>
 										</li>
 									</ul>
 								</li>
-								<li>
-									<a href="/workshop-registration.html">
-										Workshop registration
-									</a>
-								</li>
+								
 							</ul>
 						</li>
 
@@ -507,10 +457,10 @@
 						</li> -->
 
 						<li class="">
-							<a href="/contactus">Contact us</a>
+							<a href="/contactus.html">Contact us</a>
 						</li>
 					</ul>
-					<ul class="nav-add">
+					<!-- <ul class="nav-add">
 						<li class="search search_main">
 							<a href="#" class="js-open-search-popup">
 								<svg class="utouch-icon utouch-icon-search cd-nav-trigger">
@@ -518,7 +468,7 @@
 								</svg>
 							</a>
 						</li>
-					</ul>
+					</ul> -->
 					<div class="search-standard">
 						<form id="search-header" name="form-search-header" method="post">
 							<div class="typeahead__container">
@@ -745,12 +695,9 @@
 			<div class="row">
 				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
 					<div class="widget w-info">
-						<div class="site-logo">
+						<div class="site-logo ">
 							<a href="index.html" class="full-block"></a>
-							<div class="logo-text">
-								<div class="logo-title">Sysorex</div>
-								<div class="logo-sub-title">Business Technology</div>
-							</div>
+							<img class="bg-white" src="img/Asset3.png" alt="Sysorex innovator edge">
 						</div>
 
 						<h4><span class="c-primary">Simplify.</span></h4>
@@ -784,13 +731,13 @@
 								</svg>
 							</li>
 							<li>
-								<a href="08_events.html">Events</a>
+								<a href="events.html">Events</a>
 								<svg class="utouch-icon utouch-icon-arrow-right">
 									<use xlink:href="#utouch-icon-arrow-right"></use>
 								</svg>
 							</li>
 							<li>
-								<a href="18_contacts.html">Contacts</a>
+								<a href="contactus.html">Contacts</a>
 								<svg class="utouch-icon utouch-icon-arrow-right">
 									<use xlink:href="#utouch-icon-arrow-right"></use>
 								</svg>
@@ -899,45 +846,49 @@
 
 		<div class="send-message-popup">
 			<h5>Send a Message</h5>
-			<p>Sed diam nonummy nibh euismod tincidunt ut laoreet dolore magnais.</p>
-			<form class="form-validate contact-form crumina-submit" method="post" data-nonce="crumina-submit-form-nonce"
-				data-type="standard" action="modules/forms/submit.php">
-				<div class="with-icon">
-					<input name="name" placeholder="Your Name" type="text" required>
+			<div class="message success" id="messages">
+
+			</div>
+			<form class="form-validate contact-form crumina-submit" method="post" id="contactForm"
+				data-nonce="crumina-submit-form-nonce" data-type="standard">
+				<div class="with-icon ">
+					<input name="name" id="name" class="width-100" placeholder="Your Name" type="text" required>
 					<svg class="utouch-icon utouch-icon-user">
 						<use xlink:href="#utouch-icon-user"></use>
 					</svg>
 				</div>
 
-				<div class="with-icon">
-					<input name="email" placeholder="Email Adress" type="text" required>
+				<div class="with-icon ">
+					<input name="email" id="email" class="width-100" placeholder="Email Adress" type="text" required>
 					<svg class="utouch-icon utouch-icon-message-closed-envelope-1">
 						<use xlink:href="#utouch-icon-message-closed-envelope-1"></use>
 					</svg>
 				</div>
 
 				<div class="with-icon">
-					<input class="with-icon" name="phone" placeholder="Phone Number" type="tel" required>
+					<input class="with-icon width-100" name="phone" id="phone" placeholder="Phone Number" type="tel"
+						required>
 					<svg class="utouch-icon utouch-icon-telephone-keypad-with-ten-keys">
 						<use xlink:href="#utouch-icon-telephone-keypad-with-ten-keys"></use>
 					</svg>
 				</div>
 
 				<div class="with-icon">
-					<input class="with-icon" name="subject" placeholder="Subject" type="text" required>
+					<input class="with-icon width-100" name="subject" id="subject" placeholder="Subject" type="text"
+						required>
 					<svg class="utouch-icon utouch-icon-icon-1">
 						<use xlink:href="#utouch-icon-icon-1"></use>
 					</svg>
 				</div>
 
 				<div class="with-icon">
-					<textarea name="message" required placeholder="Your Message" rows="5"></textarea>
+					<textarea name="message" id="message" required placeholder="Your Message" rows="5"></textarea>
 					<svg class="utouch-icon utouch-icon-edit">
 						<use xlink:href="#utouch-icon-edit"></use>
 					</svg>
 				</div>
 
-				<button class="btn btn--green btn--with-shadow full-width">
+				<button type="submit" class="btn btn--green btn--with-shadow full-width">
 					Send a Message
 				</button>
 			</form>
@@ -1309,12 +1260,13 @@
 	<script src="js/js-plugins/segment.js"></script>
 	<script src="js/js-plugins/bootstrap.bundle.min.js"></script>
 	<!--<script src="js/js-plugins/moment.js"></script>-->
-	<!--<!--<script src="js/js-plugins/moment-timezone.js"></script>-->-->
+	<!--<script src="js/js-plugins/moment-timezone.js"></script>-->
 	<script src="js/js-plugins/isotope.pkgd.min.js"></script>
 	<script src="js/js-plugins/ion.rangeSlider.js"></script>
 	<script src="js/js-plugins/parsley.min.js"></script>
 
 	<script src="js/main.js"></script>
+	<script src="js/form.js"></script>
 
 	<!-- jQuery-scripts for Modules (Send Message) -->
 	<!-- <script src="modules/forms/src/js/jquery.validate.min.js"></script>

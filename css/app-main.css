@@ -21,7 +21,7 @@
 .content-wrapper .video-container {
   box-sizing: border-box;
   border: 1px solid #ecf5fe;
-  background-color: #ecf5fe;
+  background-color: #150e7b;
   border-radius: 16px;
   box-shadow: 0 12px 20px #0460bd2a;
   padding: 1rem;
@@ -77,4 +77,11 @@ input {
 
 .nice-select {
   width: 100%;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+.pb-4 {
+  padding-bottom: 40px;
 }
