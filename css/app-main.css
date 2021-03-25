@@ -82,11 +82,23 @@ input {
 .bg-white {
   background-color: #ffffff;
 }
+
 .pb-4 {
   padding-bottom: 40px;
 }
+
 .image-icon {
   height: 32px;
   width: 32px;
   align-items: flex-end;
+}
+
+.swiper-image {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.swiper-container {
+  position: static;
 }
