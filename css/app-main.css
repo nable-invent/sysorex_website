@@ -85,3 +85,8 @@ input {
 .pb-4 {
   padding-bottom: 40px;
 }
+.image-icon {
+  height: 32px;
+  width: 32px;
+  align-items: flex-end;
+}

@@ -8,6 +8,11 @@ const registrationForm = document.getElementById("registrationForm");
 if (registrationForm) {
     registrationForm.addEventListener("submit", (e) => registerEvent(e));
 }
+const instructorDetail = document.getElementById("instructor-card");
+
+if (instructorDetail) {
+    instructorCard();
+}
 
 function onSubmit(e) {
     e.preventDefault();
@@ -104,4 +109,68 @@ function registerEvent(e) {
             }
         })
         .catch((error) => console.log(error));
+}
+
+function instructorCard(e) {
+    console.log("hfeofhadeofhdoajh");
+    // return;
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const eventid = urlParams.get("id");
+    let data = new FormData();
+    data.append("event_id", eventid);
+    console.log(eventid);
+    const formData = {
+        method: "post",
+        header: { "Content-Type": "multipart/form-data" },
+        body: data,
+    }
+    fetch("http://localhost/sysorex/event/getInstructor", formData)
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            for (let res of data) {
+                document.getElementById("instructor-card").innerHTML += cardData(res.instructor_image, res.instructor_name,
+                    res.instructor_designation, res.instructor_description, res.instructor_facebook, res.instructor_email, res.instructor_linkedin);
+            }
+        })
+        .catch((error) => console.log(error));
+
+}
+function cardData(imageurl, name, designation, description, facebook, gmail, linkedin) {
+    let card = "";
+    card += `<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+				<div class="crumina-module crumina-testimonial-item testimonial-item-quote-right" data-mh="test-item">
+					<div class="testimonial-img-author">
+						<img src="${imageurl}" alt="author" style="object-fit:cover; height:121px; width:121px;">
+						
+                        <div class=" ">
+                            <ul class="socials">
+                                
+                                <li>
+                                    <a href="${facebook}" class="social__item linkedin">
+                                        <img class="image-icon" src="img/facebook.png"  />
+                                    </a>
+                                </li>
+                                
+                            <li>
+                            <a href="${linkedin}" class="social__item linkedin">
+                                <img class="image-icon" src="img/linkedin.png"  />
+                            </a>
+                        </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="author-info">
+                        <a href="#" class="h6 author-name">${name}</a>
+                        <div class="author-company">${designation}</div>
+                    </div>
+                    <h6 class="testimonial-text">
+                    ${description}
+                    </h6>
+                </div>
+            </div>`
+    return card;
 }
