@@ -102,3 +102,31 @@ input {
 .swiper-container {
   position: static;
 }
+
+.curriculum-event {
+  position: relative;
+}
+
+.curriculum-event.noevent:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 44;
+}
+
+.curriculum-event.noevent:hover::before {
+  content: "Comming soon";
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 46;
+}
