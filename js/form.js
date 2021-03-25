@@ -1,11 +1,13 @@
-const contactForm = document.getElementById("contactForm")
+const contactForm = document.getElementById("contactForm");
 if (contactForm) {
     contactForm.addEventListener("submit", (e) => onSubmit(e));
 }
 
-const regForm = document.getElementById("registrationForm")
+const registrationForm = document.getElementById("registrationForm");
 
-regForm.addEventListener("submit", (e) => registerEvent(e));
+if (registrationForm) {
+    registrationForm.addEventListener("submit", (e) => registerEvent(e));
+}
 
 function onSubmit(e) {
     e.preventDefault();
@@ -24,28 +26,31 @@ function onSubmit(e) {
     data.append("message", message.value);
     const formData = {
         method: "post",
-        header: { 'Content-Type': 'application/json' },
-        body: data
-    }
+        header: { "Content-Type": "application/json" },
+        body: data,
+    };
     fetch("http://localhost/sysorex/contactus/addmessage", formData)
-        .then(response => {
+        .then((response) => {
             // console.log("response: ", response)
-            return response.json()
+            return response.json();
         })
-        .then(data => {
+        .then((data) => {
             if (data.response == true) {
-                document.getElementById("messages").innerHTML = "<div class='alert alert-success'> Message Sent Successfully </div>";
+                document.getElementById("messages").innerHTML =
+                    "<div class='alert alert-success'> Message Sent Successfully </div>";
             } else {
-                document.getElementById("messages").innerHTML = "<div class='alert alert-danger'> Something went wrong</div>";
+                document.getElementById("messages").innerHTML =
+                    "<div class='alert alert-danger'> Something went wrong</div>";
             }
         })
-        .catch(error => console.log(error));
+        .catch((error) => console.log(error));
 }
+
 function registerEvent(e) {
-    e.preventDefault()
+    e.preventDefault();
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const eventid = urlParams.get('id');
+    const eventid = urlParams.get("id");
 
     const name = document.getElementById("name");
     const dob = document.getElementById("dob");
@@ -81,20 +86,22 @@ function registerEvent(e) {
     data.append("eventid", eventid);
     const formData = {
         method: "post",
-        header: { 'Content-Type': 'multipart/form-data' },
-        body: data
-    }
+        header: { "Content-Type": "multipart/form-data" },
+        body: data,
+    };
     fetch("http://localhost/sysorex/event/registerevent", formData)
-        .then(response => {
+        .then((response) => {
             // console.log("response: ", response)
-            return response.json()
+            return response.json();
         })
-        .then(data => {
+        .then((data) => {
             if (data.response.response == true) {
-                alert("Event Register Successfully");
+                document.getElementById("messages").innerHTML =
+                    "<div class='alert alert-success'> Message Sent Successfully </div>";
             } else {
-                alert("<div class='alert alert-danger'>" + data.response.msg + "<div>");
+                document.getElementById("messages").innerHTML =
+                    "<div class='alert alert-danger'>" + data.response.msg + "<div>";
             }
         })
-        .catch(error => console.log(error));
+        .catch((error) => console.log(error));
 }

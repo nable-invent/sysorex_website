@@ -5,3 +5,15 @@
 .js-typeahead {
   width: 100%;
 }
+
+.message-popup input {
+  width: 100%;
+}
+
+.w-search input {
+  width: 100%;
+}
+
+.content-wrapper .slider-wrapper {
+  margin-top: 2rem;
+}
