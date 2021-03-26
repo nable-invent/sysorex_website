@@ -102,7 +102,7 @@ function registerEvent(e) {
         .then((data) => {
             if (data.response.response == true) {
                 document.getElementById("messages").innerHTML =
-                    "<div class='alert alert-success'> Message Sent Successfully </div>";
+                    "<div class='alert alert-success'> Register Successfully </div>";
             } else {
                 document.getElementById("messages").innerHTML =
                     "<div class='alert alert-danger'>" + data.response.msg + "<div>";
