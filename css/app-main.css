@@ -119,8 +119,8 @@ input {
 }
 
 .curriculum-event.noevent:hover::before {
-  content: "Comming soon";
-  font-size: 1.2rem;
+  content: "Registration open soon";
+  font-size: 1.6rem;
   text-align: center;
   font-weight: bold;
   color: white;
@@ -129,4 +129,8 @@ input {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 46;
+}
+.image-event {
+  height: 250px;
+  width: 100%;
 }
