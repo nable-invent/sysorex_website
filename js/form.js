@@ -102,7 +102,11 @@ function registerEvent(e) {
         .then((data) => {
             if (data.response.response == true) {
                 document.getElementById("messages").innerHTML =
+<<<<<<< HEAD
                     "<div class='alert alert-success'> Register Successfully </div>";
+=======
+                    "<div class='alert alert-success'>Register Successfully </div>";
+>>>>>>> akash-sys
             } else {
                 document.getElementById("messages").innerHTML =
                     "<div class='alert alert-danger'>" + data.response.msg + "<div>";
