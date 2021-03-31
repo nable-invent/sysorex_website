@@ -179,60 +179,60 @@ function cardData(imageurl, name, designation, description, facebook, gmail, lin
 }
 
 
-function testimonialCardData(e) {
-    // return;
-    console.log("jufhjuadhfju");
+// function testimonialCardData(e) {
+//     // return;
+//     console.log("jufhjuadhfju");
 
-    let data = new FormData();
-    const formData = {
-        method: "post",
-        header: { "Content-Type": "multipart/form-data" },
-        body: data,
-    }
-    fetch("http://localhost/sysorex/testimonial/gettestimonial", formData)
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) => {
-            for (let res of data) {
-                document.getElementById("testimonial").innerHTML += testimonialCard(res.testimonial_title);
-            }
-        })
-        .catch((error) => console.log(error));
+//     let data = new FormData();
+//     const formData = {
+//         method: "post",
+//         header: { "Content-Type": "multipart/form-data" },
+//         body: data,
+//     }
+//     fetch("http://localhost/sysorex/testimonial/gettestimonial", formData)
+//         .then((response) => {
+//             return response.json();
+//         })
+//         .then((data) => {
+//             for (let res of data) {
+//                 document.getElementById("testimonial").innerHTML += testimonialCard(res.testimonial_title);
+//             }
+//         })
+//         .catch((error) => console.log(error));
 
-}
-function testimonialCard(title) {
-    let card = `<div class="swiper-slide">
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="crumina-module crumina-testimonial-item testimonial-item-arrow">
-                            <div class="author-info-wrap">
-                                <div class="testimonial-img-author">
-                                    <img src="img/author2.png" alt="author">
-                                </div>
-                                <div class="author-info">
-                                    <a href="#" class="h6 author-name">${title}</a>
-                                    <div class="author-company">Student, 23 years old</div>
-                                </div>
-                            </div>
+// }
+// function testimonialCard(title) {
+//     let card = `<div class="swiper-slide">
+//                     <div class="col-lg-12 col-md-12 col-sm-12">
+//                         <div class="crumina-module crumina-testimonial-item testimonial-item-arrow">
+//                             <div class="author-info-wrap">
+//                                 <div class="testimonial-img-author">
+//                                     <img src="img/author2.png" alt="author">
+//                                 </div>
+//                                 <div class="author-info">
+//                                     <a href="#" class="h6 author-name">${title}</a>
+//                                     <div class="author-company">Student, 23 years old</div>
+//                                 </div>
+//                             </div>
 
-                            <h6 class="testimonial-text">
-                                Qest etiam processus dynamicus, qui sequitur mutationem.
-                            </h6>
+//                             <h6 class="testimonial-text">
+//                                 Qest etiam processus dynamicus, qui sequitur mutationem.
+//                             </h6>
 
-                            <ul class="rait-stars">
-                                <li>
-                                    <!-- <a href="#"> -->
-                                        <svg class="utouch-icon utouch-icon-star">
-                                            <use xlink:href="#utouch-icon-star"></use>
-                                        </svg>
-                                    <!-- </a> -->
-                                </li>
-                                
-                            </ul>
+//                             <ul class="rait-stars">
+//                                 <li>
+//                                     <!-- <a href="#"> -->
+//                                         <svg class="utouch-icon utouch-icon-star">
+//                                             <use xlink:href="#utouch-icon-star"></use>
+//                                         </svg>
+//                                     <!-- </a> -->
+//                                 </li>
 
-                        </div>
+//                             </ul>
 
-                    </div>
-                </div>`;
-    return card;
-}
+//                         </div>
+
+//                     </div>
+//                 </div>`;
+//     return card;
+// }

@@ -183,8 +183,11 @@
 
 						<!-- Company menu item -->
 						<li class="">
-							<a href="#">About us</a>
+							<a href="#">Company</a>
 							<ul class="sub-menu">
+								<li><a href="/about_us.html">
+									About Us
+								</a></li>
 								<li>
 									<a href="/index.html#about-services">
 										Services
@@ -1210,7 +1213,7 @@
 
 		<!-- ... end Video -->
 		<!--Technology Block-->
-		<section class="bg-secondary-color background-contain bg-10 padding-y-4">
+		<section class=" background-contain  padding-y-4">
 			<h2 class="heading-title text-align-center"><span class="c-primary">Technologies we expertise in</span></h2>
 			<div class="container">
 				<div class="row">
@@ -1715,7 +1718,8 @@
 				</svg>
 			</div>
 		</section> -->
-		<section class="crumina-module crumina-module-slider background-contain bg-16 bg-blue-lighteen pt100 padding-1">
+		<div class="" style="height: 100px;"></div>
+		<section class="crumina-module crumina-module-slider background-contain bg-16 bg-blue-lighteen pt100 ">
 			<div class="container">
 				<div class="row">
 					<div class="crumina-module crumina-module-img-bottom">
@@ -1734,74 +1738,13 @@
 								</div>
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 									<div class="swiper-container top-navigation" data-show-items="2">
-										<div< class="swiper-wrapper" id="testimonial">
+										<div class="swiper-wrapper" >
 									
-										<script>
-
-
-											function testimonialCardData() {
-												// return;
-												console.log("jufhjuadhfju");
-											
-												let data = new FormData();
-												const formData = {
-													method: "post",
-													header: { "Content-Type": "multipart/form-data" },
-													body: data,
-												}
-												fetch("http://localhost/sysorex/testimonial/gettestimonial", formData)
-													.then((response) => {
-														return response.json();
-													})
-													.then((data) => {
-														for (let res of data) {
-															document.getElementById("testimonial").innerHTML += testimonialCard(res.testimonial_title,res.testimonial_subtitle,res.testimonial_comment,res.testimonial_image);
-														}
-													})
-													.catch((error) => console.log(error));
-											
-											}
-											function testimonialCard(title,subtitle,comment,image) {
-												let card = `<div class="swiper-slide">
-																<div class="col-lg-12 col-md-12 col-sm-12">
-																	<div class="crumina-module crumina-testimonial-item testimonial-item-arrow">
-																		<div class="author-info-wrap">
-																			<div class="testimonial-img-author">
-																				<img src="${image}" alt="author">
-																			</div>
-																			<div class="author-info">
-																				<a href="#" class="h6 author-name">${title}</a>
-																				<div class="author-company">${subtitle}</div>
-																			</div>
-																		</div>
-											
-																		<h6 class="testimonial-text">
-																			${comment}
-																		</h6>
-											
-																		<ul class="rait-stars">
-																			<li>
-																				<!-- <a href="#"> -->
-																					<svg class="utouch-icon utouch-icon-star">
-																						<use xlink:href="#utouch-icon-star"></use>
-																					</svg>
-																				<!-- </a> -->
-																			</li>
-																			
-																		</ul>
-											
-																	</div>
-											
-																</div>
-															</div>`;
-												return card;
-											}
-											testimonialCardData();
-											</script>
+										
 									
 											
 											<!-- <div id="testimonial"> -->
-												<!--<div class="swiper-slide">
+												<div class="swiper-slide">
 													<div class="col-lg-12 col-md-12 col-sm-12">
 														<div class="crumina-module crumina-testimonial-item testimonial-item-arrow">
 															<div class="author-info-wrap">
@@ -1832,13 +1775,77 @@
 														</div>
 		
 													</div>
-												</div> -->
+												</div>
+												<div class="swiper-slide">
+													<div class="col-lg-12 col-md-12 col-sm-12">
+														<div class="crumina-module crumina-testimonial-item testimonial-item-arrow">
+															<div class="author-info-wrap">
+																<div class="testimonial-img-author">
+																	<img src="img/author2.png" alt="author">
+																</div>
+																<div class="author-info">
+																	<a href="#" class="h6 author-name">Chris Miller3</a>
+																	<div class="author-company">Student, 23 years old</div>
+																</div>
+															</div>
+		
+															<h6 class="testimonial-text">
+																Qest etiam processus dynamicus, qui sequitur mutationem.
+															</h6>
+		
+															<ul class="rait-stars">
+																<li>
+																	 <a href="#"> 
+																		<svg class="utouch-icon utouch-icon-star">
+																			<use xlink:href="#utouch-icon-star"></use>
+																		</svg>
+																</a> 
+																</li>
+																
+															</ul>
+		
+														</div>
+		
+													</div>
+												</div>
+												<div class="swiper-slide">
+													<div class="col-lg-12 col-md-12 col-sm-12">
+														<div class="crumina-module crumina-testimonial-item testimonial-item-arrow">
+															<div class="author-info-wrap">
+																<div class="testimonial-img-author">
+																	<img src="img/author2.png" alt="author">
+																</div>
+																<div class="author-info">
+																	<a href="#" class="h6 author-name">Chris Miller4</a>
+																	<div class="author-company">Student, 23 years old</div>
+																</div>
+															</div>
+		
+															<h6 class="testimonial-text">
+																Qest etiam processus dynamicus, qui sequitur mutationem.
+															</h6>
+		
+															<ul class="rait-stars">
+																<li>
+																	 <a href="#"> 
+																		<svg class="utouch-icon utouch-icon-star">
+																			<use xlink:href="#utouch-icon-star"></use>
+																		</svg>
+																</a> 
+																</li>
+																
+															</ul>
+		
+														</div>
+		
+													</div>
+												</div>
 											<!-- </div> -->
 										</div>
 	
 										<!--Prev next buttons-->
 	
-										<div class="btn-slider-wrap navigation-center-bottom">
+										<!-- <div class="btn-slider-wrap navigation-center-bottom">
 	
 											<div class="btn-prev">
 												<svg class="utouch-icon icon-hover utouch-icon-arrow-left-1">
@@ -1858,7 +1865,7 @@
 												</svg>
 											</div>
 	
-										</div>
+										</div> -->
 									</div>
 								</div>
 							</div>
@@ -1870,7 +1877,7 @@
 		</section>
 		<!-- ... end Testimonials -->
 	</div>
-
+<div class="" style="height: 100px;"></div>
 
 	<!-- Footer -->
 
@@ -2466,7 +2473,66 @@
 
 	<!-- my scripts -->
 	<script src="js/app-main.js"></script>
+	<script>
+		testimonialCardData();
 
+		function testimonialCardData() {
+			// return;
+			let data = new FormData();
+			const formData = {
+				method: "post",
+				header: { "Content-Type": "multipart/form-data" },
+				body: data,
+			}
+			fetch("http://localhost/sysorex/testimonial/gettestimonial", formData)
+				.then((response) => {
+					return response.json();
+				})
+				.then((data) => {
+					for (let res of data) {
+						document.getElementById("testimonial").innerHTML += testimonialCard(res.testimonial_title,res.testimonial_subtitle,res.testimonial_comment,res.testimonial_image);
+					}
+				})
+				.catch((error) => console.log(error));
+		
+		}
+		function testimonialCard(title,subtitle,comment,image) {
+			let card = `<div class="swiper-slide">
+							<div class="col-lg-12 col-md-12 col-sm-12">
+								<div class="crumina-module crumina-testimonial-item testimonial-item-arrow">
+									<div class="author-info-wrap">
+										<div class="testimonial-img-author">
+											<img src="${image}" alt="author">
+										</div>
+										<div class="author-info">
+											<a href="#" class="h6 author-name">${title} akash</a>
+											<div class="author-company">${subtitle}</div>
+										</div>
+									</div>
+		
+									<h6 class="testimonial-text">
+										${comment}
+									</h6>
+		
+									<ul class="rait-stars">
+										<li>
+											<!-- <a href="#"> -->
+												<svg class="utouch-icon utouch-icon-star">
+													<use xlink:href="#utouch-icon-star"></use>
+												</svg>
+											<!-- </a> -->
+										</li>
+										
+									</ul>
+		
+								</div>
+		
+							</div>
+						</div>`;
+			return card;
+		}
+		
+		</script>
 </body>
 
 </html>
