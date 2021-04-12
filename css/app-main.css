@@ -134,3 +134,35 @@ input {
   height: 250px;
   width: 100%;
 }
+
+
+@media (max-width: 768px) {
+    html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .choose-item {
+        padding: 20px 30px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .clientelle-img {
+        display: none;
+    }
+    
+    .clientelle-heading {
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
