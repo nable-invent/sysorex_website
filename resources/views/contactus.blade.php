@@ -41,7 +41,6 @@
 
 					<div class="crumina-module crumina-heading">
 						<h3 class="heading-title">Get in Touch with Us</h3>
-					
 					</div>
 					<div class="widget w-contacts w-contacts--style2 ">
 						<!-- <div class="contact-item display-flex">

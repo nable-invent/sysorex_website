@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Sysorex Innovator Edge | Home</title>
+	<title>Sysorex Innovator Edge </title>
 
 	<link rel="stylesheet" type="text/css" href="{{url('/')}}/css/theme-styles.css">
 	<link rel="stylesheet" type="text/css" href="{{url('/')}}/css/blocks.css">
@@ -180,27 +180,68 @@
 
 						<!-- Company menu item -->
 						<li class="">
-							<a href="#">Company</a>
+							<a href="{{url('/aboutus')}}">About US</a>
 							<ul class="sub-menu">
 								<li><a href="{{url('/aboutus')}}">
-									About Us
+									Company overview
 								</a></li>
 								<li>
-									<a href="{{url('/#about-services')}}">
-										Services
+									<a href="{{url('/aboutus')}}">
+										Clients
 									</a>
 								</li>
 								<li>
-									<a href="{{url('/#about-timeline')}}">
-										Timeline
+									<a href="{{url('/aboutus')}}">
+										Our people
+									</a>
+								</li>
+                                <li>
+									<a href="{{url('/aboutus')}}">
+										Career
 									</a>
 								</li>
 							</ul>
 						</li>
 
+                        <li class="">
+							<a href="{{url('/aboutus')}}">Service</a>
+							<ul class="sub-menu">
+								<li><a href="{{url('/aboutus')}}">
+									Team Extension
+								</a></li>
+								<li>
+									<a href="{{url('/aboutus')}}">
+										Software Development
+									</a>
+								</li>
+							</ul>
+						</li>
+                        <li class="">
+							<a href="{{url('/aboutus')}}">Expertise</a>
+							<ul class="sub-menu">
+								<li><a href="{{url('/aboutus')}}">
+									Expertise
+								</a></li>
+								<li>
+									<a href="{{url('/aboutus')}}">
+										Industries
+									</a>
+								</li>
+								<li>
+									<a href="{{url('/aboutus')}}">
+										Technologies
+									</a>
+								</li>
+                                <li>
+									<a href="{{url('/aboutus')}}">
+										Career
+									</a>
+								</li>
+							</ul>
+						</li>
 						
 						<li class="">
-							<a href="{{url('/events')}}">Events</a>
+							<a href="{{url('/events')}}">Events & News</a>
 							<ul class="sub-menu">
 								<li class="menu-item-has-children">
 									<a href="/events">
