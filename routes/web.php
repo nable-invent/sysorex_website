@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Admin\AuthController;
+use App\Http\Controllers\Admin\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +26,7 @@ Route::get('/aboutus',function(){
 Route::get('/contactus',function(){
     return view('contactus');
 });
+Route::post('/sentmessage',[ContactController::class,'addContact']);
 
 Route::get('/event-details',function(){
     return view('event_details');
@@ -40,3 +43,11 @@ Route::get('/products',function(){
 Route::get('/registration',function(){
     return view('workshop-registration');
 });
+
+
+// Admin Routes
+Route::get('/admin',[AuthController::class,'login']);
+
+Route::post('/admin/checkLogin',[AuthController::class,'checkLogin']);
+
+Route::get('/admin/dashboard',[AdminController::class,'dashboard']);

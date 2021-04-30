@@ -29,6 +29,18 @@
 
 	<!-- my stylesheets -->
 	<link rel="stylesheet" type="text/css" href="{{url('/')}}/css/app-main.css">
+    <style>
+        .message-notification{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            padding:30px;
+            background-color: rgba(211, 211, 211, 0.884);
+            color:black;
+            z-index: 9;
+        }
+    </style>
 
 </head>
 
@@ -303,7 +315,7 @@
 	</header>
 
 	<div class="header-spacer"></div>
-
+    
     @yield('content')
 
     <div class="" style="height: 100px;"></div>
@@ -457,7 +469,11 @@
 		</div>
 
 	</footer>
-
+    @if(session('success'))
+        <div class="message-notification">
+            {{session('success')}}
+        </div>
+    @endif
 	<!-- End Footer -->
 
 
@@ -475,8 +491,8 @@
 			<div class="message success" id="messages">
 
 			</div>
-			<form class="form-validate contact-form crumina-submit" method="post" id="contactForm"
-				data-nonce="crumina-submit-form-nonce" data-type="standard">
+			<form class="form-validate contact-form crumina-submit" method="post" action="/sentmessage" data-nonce="crumina-submit-form-nonce" data-type="standard">
+                @csrf
 				<div class="with-icon ">
 					<input name="name" id="name" class="width-100" placeholder="Your Name" type="text" required>
 					<svg class="utouch-icon utouch-icon-user">
