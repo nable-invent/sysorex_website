@@ -36,8 +36,8 @@ Route::get('/events',function(){
     return view('events');
 });
 
-Route::get('/products',function(){
-    return view('products');
+Route::get('/software-development',function(){
+    return view('software');
 });
 
 Route::get('/registration',function(){

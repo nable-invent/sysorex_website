@@ -8,10 +8,10 @@ use App\Models\Admin\AdminModel;
 class AdminController extends Controller
 {
     public function dashboard(){
-        $aid = session(['admin_id']);
-        return $aid;
+        $aid = session("admin_id");
+       
         $profile = AdminModel::where('admin_id','=',$aid)->first();
-        return $profile;
+        // return $profile;
         return view('admin.starter',compact('profile'));
     }
 }

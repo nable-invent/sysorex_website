@@ -222,7 +222,7 @@
 									Team Extension
 								</a></li>
 								<li>
-									<a href="{{url('/aboutus')}}">
+									<a href="{{url('/software-development')}}">
 										Software Development
 									</a>
 								</li>

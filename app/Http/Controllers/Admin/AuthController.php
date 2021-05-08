@@ -22,7 +22,7 @@ class AuthController extends Controller
         $user = AuthModel::where('admin_email',"=",$req->email)->first();
         if($user){
             if(Hash::check($req->password, $user->admin_password)){
-                session(["admin_id"=>$user->user_id]);
+                session(["admin_id"=>$user->admin_id]);
                 return redirect("/admin/dashboard");
             }
         }
