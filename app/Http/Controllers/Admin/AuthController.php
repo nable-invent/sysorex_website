@@ -23,7 +23,7 @@ class AuthController extends Controller
         if($user){
             if(Hash::check($req->password, $user->admin_password)){
                 session(["admin_id"=>$user->admin_id]);
-                return redirect("/admin/dashboard");
+                return redirect("/admin/profile");
             }
         }
         return redirect()->back()->with('error','Invalid credentials');

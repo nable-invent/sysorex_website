@@ -13,6 +13,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{url('/')}}/assets/plugins/fontawesome-free/css/all.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{{url('/')}}/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="{{url('/')}}/assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="{{url('/')}}/assets/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{url('/')}}/assets/dist/css/adminlte.min.css">
 </head>
@@ -98,8 +102,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+
+          <li class="nav-item @if($data['type']=='profile') menu-open @endif">
+            <a href="#" class="nav-link @if($data['type']=='profile') active @endif">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Profile Settings
@@ -108,19 +113,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active">
+                <a href="{{url('/')}}/admin/profile" class="nav-link @if($data['subtype']=='myprofile') active @endif">
                   <i class="far fa-circle nav-icon"></i>
                   <p>My Profile</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{url('/')}}/admin/viewuser" class="nav-link @if($data['subtype']=='user') active @endif">
                   <i class="far fa-circle nav-icon"></i>
                   <p>User Management</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="#" class="nav-link  @if($data['subtype']=='asset') active @endif">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Asset Management</p>
                 </a>
@@ -243,5 +248,35 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="{{url('/')}}/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="{{url('/')}}/assets/dist/js/adminlte.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="{{url('/')}}/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="{{url('/')}}/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="{{url('/')}}/assets/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="{{url('/')}}/assets/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="{{url('/')}}/assets/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="{{url('/')}}/assets/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="{{url('/')}}/assets/plugins/jszip/jszip.min.js"></script>
+<script src="{{url('/')}}/assets/plugins/pdfmake/pdfmake.min.js"></script>
+<script src="{{url('/')}}/assets/plugins/pdfmake/vfs_fonts.js"></script>
+<script src="{{url('/')}}/assets/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="{{url('/')}}/assets/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="{{url('/')}}/assets/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      // "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
 </body>
 </html>

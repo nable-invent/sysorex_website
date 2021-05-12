@@ -47,7 +47,14 @@ Route::get('/registration',function(){
 
 // Admin Routes
 Route::get('/admin',[AuthController::class,'login']);
-
 Route::post('/admin/checkLogin',[AuthController::class,'checkLogin']);
+Route::get('/admin/profile',[AdminController::class,'profile']);
 
-Route::get('/admin/dashboard',[AdminController::class,'dashboard']);
+//profile
+Route::post('/admin/profile/update',[AdminController::class,'editProfile']);
+Route::get('/admin/viewuser',[AdminController::class,'viewUser']);
+Route::post('/admin/profile/changepassword',[AdminController::class,'changePassword']);
+
+//user
+Route::get('/admin/profile/adduser',[AdminController::class,'addUser']);
+Route::post('/admin/profile/adduserdata',[AdminController::class,'addUserData']);

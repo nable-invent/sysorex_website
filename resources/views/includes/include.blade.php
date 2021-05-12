@@ -259,18 +259,7 @@
 									<a href="/events">
 										Latest events
 									</a>
-									<!-- <ul class="sub-menu">
-										<li>
-											<a href="/event_details.html?id=1">Campus Engagement Program</a>
-										</li>
-										<li>
-											<a href="/event_details.html?id=2">SPARK</a>
-										</li>
-
-										<li>
-											<a href="/event_details.html?id=3">Modern Age Spartan</a>
-										</li>
-									</ul> -->
+									
 								</li>
 
 							</ul>
