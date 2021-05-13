@@ -36,6 +36,10 @@
   margin-top: 4rem;
 }
 
+.margin-bottom-4 {
+  margin-bottom: 4rem;
+}
+
 .padding-y-4 {
   padding: 4rem 0;
 }
@@ -135,34 +139,35 @@ input {
   width: 100%;
 }
 
-
 @media (max-width: 768px) {
-    html, body {
-        width: 100% !important;
-        overflow-x: hidden !important;
-    }
+  html,
+  body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
 }
 
 @media (max-width: 600px) {
-    .choose-item {
-        padding: 20px 30px !important;
-    }
+  .choose-item {
+    padding: 20px 30px !important;
+  }
 }
 
 @media (max-width: 1200px) {
-    .clientelle-img {
-        display: none;
-    }
-    
-    .clientelle-heading {
-        text-align: center;
-    }
+  .clientelle-img {
+    display: none;
+  }
+
+  .clientelle-heading {
+    text-align: center;
+  }
 }
 
-
-
-
-
-
-
-
+@media (min-width: 1000px) {
+  .padding-r-values {
+    padding-right: 80px !important;
+  }
+  .padding-l-values {
+    padding-left: 80px !important;
+  }
+}
