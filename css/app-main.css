@@ -18,6 +18,14 @@
   margin-top: 2rem;
 }
 
+.min-h-100vh {
+  min-height: 100vh;
+}
+
+.img-w-100 {
+  width: 100%;
+}
+
 .content-wrapper .video-container {
   box-sizing: border-box;
   border: 1px solid #ecf5fe;
