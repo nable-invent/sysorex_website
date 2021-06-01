@@ -83,6 +83,11 @@
   margin: 0;
 }
 
+.margin-top-0 {
+  margin-top: 0;
+  margin-bottom: 100px;
+}
+
 input {
   width: 100%;
 }
@@ -93,6 +98,10 @@ input {
 
 .bg-white {
   background-color: #ffffff;
+}
+
+.text-dark {
+  color: #273f5b;
 }
 
 .pb-4 {
