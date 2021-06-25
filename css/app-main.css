@@ -151,9 +151,11 @@ input {
   transform: translate(-50%, -50%);
   z-index: 46;
 }
+
 .image-event {
   height: 250px;
   width: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
