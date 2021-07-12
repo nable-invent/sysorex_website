@@ -67,8 +67,16 @@
   filter: none !important;
 }
 
+.d-flex {
+  display: flex;
+}
+
 .justify-center {
   justify-content: center;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
 }
 
 .padding-1 {
@@ -189,4 +197,18 @@ input {
   .padding-l-values {
     padding-left: 80px !important;
   }
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.spartan-img {
+  width: 385px;
+  margin-bottom: 40px;
+  border-radius: 4px;
+}
+
+.spartan-img img {
+  border-radius: inherit;
 }
