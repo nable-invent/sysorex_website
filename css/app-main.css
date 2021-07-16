@@ -60,6 +60,10 @@
   color: white;
 }
 
+.text-neon-light {
+  color: #ffff00;
+}
+
 .padding-y-2 {
   padding: 2rem 0;
 }
