@@ -52,8 +52,17 @@
   padding: 4rem 0;
 }
 
+.text-align-justify {
+  text-align: justify;
+}
+
 .text-align-center {
   text-align: center;
+}
+
+.list-disc {
+  list-style: disc;
+  padding-left: 16px;
 }
 
 .clients-item {
