@@ -237,3 +237,15 @@ input {
 .spartan-img img {
   border-radius: inherit;
 }
+
+.post-thumb img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+@media (max-width: 576px) {
+  .post-thumb img {
+    max-height: 200px;
+    object-fit: cover;
+  }
+}
